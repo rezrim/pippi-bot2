@@ -4,9 +4,14 @@ const Canvas = require('canvas');
 const { registerFont } = require('canvas');
 const Discord = require('discord.js');
 const serp = require("serp");
+const http = require("http");
 const axios = require('axios')
 const bodyParser = require('body-parser')
 const translate = require("googletrans").default;
+
+var server = http.createServer((req, res) => {
+  //your stuff
+});
 
 const image = require('./image.js');
 const action = require('./function');
@@ -562,3 +567,7 @@ function secondsToHms(d) {
   var sDisplay = s > 0 ? s + (s == 1 ? " detik" : " detik") : "";
   return hDisplay + mDisplay + sDisplay; 
 }
+
+server.listen(process.env.PORT || 80, () => {
+  console.log("Listening on port 80");
+});
