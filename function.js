@@ -5,10 +5,10 @@ const fetch = require('node-fetch');
 const weather = require('weather-js');
 const Discord = require('discord.js');
 const math = require("mathjs");
-const API_NEWS = "79d3cd3f35c54cb7a38dfad018237ee6";
+const API_NEWS = process.env.API_NEWS;
 
 const bot = new Discord.Client();
-const TOKEN = "NzUyNTEyNzExNjA2NDAzMDcy.X1YuEw.pasMpfCD7Igfc7O-H7PEisDqCy4";
+const TOKEN = process.env.TOKEN;
 
 
 

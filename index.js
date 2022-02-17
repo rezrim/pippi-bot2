@@ -25,7 +25,8 @@ app.use(bodyParser.json())
 app.use(routeSaya)
 
 const bot = new Discord.Client();
-const TOKEN = "NzUyNTEyNzExNjA2NDAzMDcy.X1YuEw.pasMpfCD7Igfc7O-H7PEisDqCy4";
+const TOKEN = process.env.TOKEN;
+const API_YTB = process.env.API_YTB
 
 let queue=[]
 let isPlaying=false
